@@ -266,6 +266,7 @@ var tonnetz = (function() {
 
     // Fill faces. Each vertex takes care of the two faces above it.
     for (var tone=0; tone<12; tone++) {
+      console.log(`tone: ${tone}`);
       var c = tones[tone].cache;
 
       var leftNeighbor = (tone+3)%12;
@@ -287,6 +288,7 @@ var tonnetz = (function() {
 
       // Fill faces
       for (var i=0; i<toneGrid[tone].length; i++) {
+        console.log(`i: ${i}`);
         setTranslate(ctx, toneGrid[tone][i].x, toneGrid[tone][i].y);
 
         var minorOn = false, majorOn = false;
@@ -298,7 +300,45 @@ var tonnetz = (function() {
             ctx.lineTo(c.topPos.x, c.topPos.y);
             ctx.lineTo(c.leftPos.x, c.leftPos.y);
             ctx.closePath();
-            ctx.fillStyle = colorscheme.minorFill;
+            // ctx.fillStyle = colorscheme.minorFill;
+            switch (tone) {
+              case 0: // Cm
+              ctx.fillStyle = `#9a8b85`;
+              break;
+              case 1: // C#m
+              ctx.fillStyle = `#15e7ac`;
+              break;
+              case 2: // Dm
+              ctx.fillStyle = `#cacaca`;
+              break;
+              case 3: // Ebm
+              ctx.fillStyle = `#5e4d79`;
+              break;
+              case 4: // Em
+              ctx.fillStyle = `#cacaca`;
+              break;
+              case 5: // Fm
+              ctx.fillStyle = `#aea29e`;
+              break;
+              case 6: // F#m
+              ctx.fillStyle = `#15e7ac`;
+              break;
+              case 7: // Gm
+              ctx.fillStyle = `#aea29e`;
+              break;
+              case 8: // Abm
+              ctx.fillStyle = `#443859`;
+              break;
+              case 9: // Am
+              ctx.fillStyle = `#dadada`;
+              break;
+              case 10: // Bbm
+              ctx.fillStyle = `#443859`;
+              break;
+              case 11: // Bm
+              ctx.fillStyle = `#15e7ac`;
+              break;
+            }
             ctx.fill();
           }
           if (rightOn) { // right face (major triad)
@@ -308,7 +348,45 @@ var tonnetz = (function() {
             ctx.lineTo(c.topPos.x, c.topPos.y);
             ctx.lineTo(c.rightPos.x, c.rightPos.y);
             ctx.closePath();
-            ctx.fillStyle = colorscheme.majorFill;
+            // ctx.fillStyle = colorscheme.majorFill;
+            switch (tone) {
+              case 0: // C
+              ctx.fillStyle = `#dadada`;
+              break;
+              case 1: // Db
+              ctx.fillStyle = `#2954c1`;
+              break;
+              case 2: // D
+              ctx.fillStyle = `#f2ba5a`;
+              break;
+              case 3: // Eb
+              ctx.fillStyle = `#9a8b85`;
+              break;
+              case 4: // E
+              ctx.fillStyle = `#f2ba5a`;
+              break;
+              case 5: // F
+              ctx.fillStyle = `#cacaca`;
+              break;
+              case 6: // F#
+              ctx.fillStyle = `#ff6633`;
+              break;
+              case 7: // G
+              ctx.fillStyle = `#cacaca`;
+              break;
+              case 8: // Ab
+              ctx.fillStyle = `#aea29e`;
+              break;
+              case 9: // A
+              ctx.fillStyle = `#f1ab31`;
+              break;
+              case 10: // Bb
+              ctx.fillStyle = `#aea29e`;
+              break;
+              case 11: // B
+              ctx.fillStyle = `#f1ab31`;
+              break;
+            }
             ctx.fill();
           }
         }

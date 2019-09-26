@@ -5,7 +5,6 @@ $(function(){
   ctx = canvas.getContext("2d");
   noteLabels = document.getElementById("note-labels");
   triadLabels = document.getElementById("triad-labels");
-  $(triadLabels).hide();
 
   storage.init();
   colorscheme.init('default');

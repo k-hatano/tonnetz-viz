@@ -19,19 +19,19 @@ colorscheme.addScheme("default", {
     },
     "ON": {
       "label": "#ffffff",
-      "fill": "#2c4885",
-      "stroke": "#0e1f5b"
+      "fill": "#666666",
+      "stroke": "#333333"
     }
   },
   "faces": {
     "major": {
       "label-off": "#c0c0c0",
-      "label-on": "#bea866",
+      "label-on": "#000000",
       "fill": "#faf7db"
     },
     "minor": {
       "label-off": "#c0c0c0",
-      "label-on": "#aa9b68",
+      "label-on": "#000000",
       "fill": "#eeebc9"
     }
   }
