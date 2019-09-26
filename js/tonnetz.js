@@ -397,8 +397,14 @@ var tonnetz = (function() {
 
         if (minorOn) {
           $minorTriadLabel.addClass('state-ON');
+          if (tone === 3 || tone === 8 || tone === 10) {
+            $minorTriadLabel.addClass('white');
+          }
         } else {
           $minorTriadLabel.removeClass('state-ON');
+          if (tone === 3 || tone === 8 || tone === 10) {
+            $minorTriadLabel.removeClass('white');
+          }
         }
 
         if (majorOn) {
