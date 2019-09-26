@@ -3,7 +3,7 @@ var tonnetz = (function() {
 
   var module = {};
 
-  var TONE_NAMES = ['Do', 'Do♯', 'Re', 'Re♯', 'Mi', 'Fa', 'Fa♯', 'So', 'So♯', 'La', 'La♯', 'Si'];
+  var TONE_NAMES = ['ド', 'ド♯', 'レ', 'レ♯', 'ミ', 'ファ', 'ファ♯', 'ソ', 'ソ♯', 'ラ', 'ラ♯', 'シ'];
   var CHORD_NAMES = ['C', 'C♯', 'D', 'D♯', 'E', 'F', 'F♯', 'G', 'G♯', 'A', 'A♯', 'B'];
   var STATE_OFF = 0,
       STATE_GHOST = 1,
