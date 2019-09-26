@@ -4,6 +4,7 @@ var tonnetz = (function() {
   var module = {};
 
   var TONE_NAMES = ['Do', 'Do♯', 'Re', 'Re♯', 'Mi', 'Fa', 'Fa♯', 'So', 'So♯', 'La', 'La♯', 'Si'];
+  var CHORD_NAMES = ['C', 'C♯', 'D', 'D♯', 'E', 'F', 'F♯', 'G', 'G♯', 'A', 'A♯', 'B'];
   var STATE_OFF = 0,
       STATE_GHOST = 1,
       STATE_SUST = 2,
@@ -499,6 +500,7 @@ var tonnetz = (function() {
     }
 
     var name = tones[tone].name;
+    var chordName = CHORD_NAMES[tone];
     var node = {'x': x, 'y': y};
 
     // Create the note label.
@@ -508,12 +510,12 @@ var tonnetz = (function() {
     // Create labels for the two triads above this node.
     if (module.layout == LAYOUT_RIEMANN) {
       var yUnit = u * SQRT_3;
-      node.majorTriadLabel = createLabel(name.toUpperCase(), x + u/2, y + yUnit/6);
-      node.minorTriadLabel = createLabel(name.toLowerCase(), x + u/2, y - yUnit/6);
+      node.majorTriadLabel = createLabel(chordName, x + u/2, y + yUnit/6);
+      node.minorTriadLabel = createLabel(chordName + 'm', x + u/2, y - yUnit/6);
     } else if (module.layout == LAYOUT_SONOME) {
       var xUnit = u * SQRT_3;
-      node.majorTriadLabel = createLabel(name.toUpperCase(), x + xUnit/6, y - u/2);
-      node.minorTriadLabel = createLabel(name.toLowerCase(), x - xUnit/6, y - u/2);
+      node.majorTriadLabel = createLabel(chordName, x + xUnit/6, y - u/2);
+      node.minorTriadLabel = createLabel(chordName + 'm', x - xUnit/6, y - u/2);
     }
     node.majorTriadLabel.className = 'major';
     node.minorTriadLabel.className = 'minor';
