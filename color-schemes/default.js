@@ -27,12 +27,14 @@ colorscheme.addScheme("default", {
     "major": {
       "label-off": "#c0c0c0",
       "label-on": "#bea866",
-      "fill": "#faf7db"
+      "fill": "#faf7db",
+      "thin": "#fffff0"
     },
     "minor": {
       "label-off": "#c0c0c0",
       "label-on": "#aa9b68",
-      "fill": "#eeebc9"
+      "fill": "#eeebc9",
+      "thin": "#fffff0"
     }
   }
 });

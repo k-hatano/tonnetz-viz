@@ -27,12 +27,14 @@ colorscheme.addScheme("greenonblack", {
     "major": {
       "label-off": "#121212",
       "label-on": "#525252",
-      "fill": "#212121"
+      "fill": "#212121",
+      "thin": "#111111"
     },
     "minor": {
       "label-off": "#121212",
       "label-on": "#6d6d6d",
-      "fill": "#161616"
+      "fill": "#161616",
+      "thin": "#111111"
     }
   }
 });
