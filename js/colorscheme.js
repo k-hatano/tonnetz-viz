@@ -105,6 +105,8 @@ var colorscheme = (function() {
 
     this.minorFill = data['faces']['minor']['fill'];
     this.majorFill = data['faces']['major']['fill'];
+    this.minorFillThin = data['faces']['major']['thin'];
+    this.majorFillThin = data['faces']['major']['thin'];
 
     var custom = name.startsWith('custom');
     $('#edit-scheme').parent()
@@ -356,6 +358,10 @@ var colorscheme = (function() {
               "fill": {
                 "type": "string",
                 "format": "color"
+              },
+              "thin": {
+                "type": "string",
+                "format": "color"
               }
             },
             "required": [
@@ -375,6 +381,10 @@ var colorscheme = (function() {
                 "format": "color"
               },
               "fill": {
+                "type": "string",
+                "format": "color"
+              },
+              "thin": {
                 "type": "string",
                 "format": "color"
               }

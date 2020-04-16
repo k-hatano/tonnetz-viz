@@ -27,12 +27,14 @@ colorscheme.addScheme("apollo", {
     "major": {
       "label-off": "#c0c0c0",
       "label-on": "#479e63",
-      "fill": "#b6dec2"
+      "fill": "#b6dec2",
+      "thin": "#ddeedd"
     },
     "minor": {
       "label-off": "#c0c0c0",
       "label-on": "#479e63",
-      "fill": "#cde9d6"
+      "fill": "#cde9d6",
+      "thin": "#ddeedd"
     }
   }
 });

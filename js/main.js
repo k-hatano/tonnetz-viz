@@ -59,6 +59,7 @@ $(function(){
   $('#show-note-names').click(function() { $(noteLabels).toggle(); });
   $('#show-triad-names').click(function() { $(triadLabels).toggle(); });
   $('#show-unit-cell').click(function() { tonnetz.toggleUnitCell(); });
+  $('#scale').change(function() { tonnetz.changeScale(); });
   $('#ghost-duration').on('input change propertychange paste', function() {
     if(!tonnetz.setGhostDuration($(this).val())) {
       $(this).closest('.form-group').addClass('has-error');

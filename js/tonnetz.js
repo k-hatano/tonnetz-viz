@@ -20,6 +20,7 @@ var tonnetz = (function() {
   module.ghostDuration = 500;
   module.layout = LAYOUT_RIEMANN;
   module.unitCellVisible = false;
+  module.scale = 0;
 
   var toneGrid = [];
   var tones;
@@ -192,6 +193,11 @@ var tonnetz = (function() {
     this.draw();
   };
 
+  module.changeScale = function(scale) {
+    this.scale = parseInt($('#scale').val()); 
+    this.draw();
+  };
+
 
   var releaseTone = function(tone) {
     tone.release = new Date();
@@ -294,6 +300,28 @@ var tonnetz = (function() {
       // Fill faces
       for (var i=0; i<toneGrid[tone].length; i++) {
         setTranslate(ctx, toneGrid[tone][i].x, toneGrid[tone][i].y);
+
+        if (module.scale >= 0) {
+          if (isDiatonicNote([tone, (tone + 3) % 12, (tone + 7) % 12], module.scale)) {
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            ctx.lineTo(c.topPos.x, c.topPos.y);
+            ctx.lineTo(c.leftPos.x, c.leftPos.y);
+            ctx.closePath();
+            ctx.fillStyle = colorscheme.minorFillThin;
+            ctx.fill();
+          }
+          
+          if (isDiatonicNote([tone, (tone + 4) % 12, (tone + 7) % 12], module.scale)) {
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            ctx.lineTo(c.topPos.x, c.topPos.y);
+            ctx.lineTo(c.rightPos.x, c.rightPos.y);
+            ctx.closePath();
+            ctx.fillStyle = colorscheme.majorFillThin;
+            ctx.fill();
+          }
+        }
 
         var minorOn = false, majorOn = false;
         if (thisOn && topOn) {
@@ -527,6 +555,23 @@ var tonnetz = (function() {
 
     this.draw(true);
   };
+
+  function isDiatonicNote(notes, scale) {
+    var diatonicNotes = new Array((scale) % 12,
+       (scale + 2) % 12, 
+       (scale + 4) % 12,
+       (scale + 5) % 12,
+       (scale + 7) % 12,
+       (scale + 9) % 12,
+       (scale + 11) % 12);
+
+    for (var noteIndex = 0; noteIndex < notes.length; noteIndex++) {
+      if (diatonicNotes.indexOf(notes[noteIndex]) < 0) {
+        return false;
+      }
+    }
+    return true;
+  }
 
   return module;
 })();
