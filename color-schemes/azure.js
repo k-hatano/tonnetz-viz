@@ -1,5 +1,5 @@
-colorscheme.addScheme("aqua", {
-  "name": "Aqua",
+colorscheme.addScheme("azure", {
+  "name": "Azure",
   "background": "#ffffff",
   "nodes": {
     "OFF": {
@@ -28,7 +28,7 @@ colorscheme.addScheme("aqua", {
       "label-off": "#c0c0c0",
       "label-on": "#ffffff",
       "fill": "#60b0ff",
-      "thin": "#f0f0f0"
+      "thin": "#e3e7f0"
     },
     "minor": {
       "label-off": "#c0c0c0",
