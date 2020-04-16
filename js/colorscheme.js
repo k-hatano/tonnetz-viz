@@ -358,6 +358,10 @@ var colorscheme = (function() {
               "fill": {
                 "type": "string",
                 "format": "color"
+              },
+              "thin": {
+                "type": "string",
+                "format": "color"
               }
             },
             "required": [
@@ -377,6 +381,10 @@ var colorscheme = (function() {
                 "format": "color"
               },
               "fill": {
+                "type": "string",
+                "format": "color"
+              },
+              "thin": {
                 "type": "string",
                 "format": "color"
               }
