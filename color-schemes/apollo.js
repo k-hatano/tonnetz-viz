@@ -28,13 +28,13 @@ colorscheme.addScheme("apollo", {
       "label-off": "#c0c0c0",
       "label-on": "#479e63",
       "fill": "#b6dec2",
-      "thin": "#ddeedd"
+      "thin": "#e1eee1"
     },
     "minor": {
       "label-off": "#c0c0c0",
       "label-on": "#479e63",
       "fill": "#cde9d6",
-      "thin": "#ddeedd"
+      "thin": "#e2eee2"
     }
   }
 });

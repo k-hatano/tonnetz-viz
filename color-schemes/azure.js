@@ -33,7 +33,7 @@ colorscheme.addScheme("azure", {
     "minor": {
       "label-off": "#c0c0c0",
       "label-on": "#ffffff",
-      "fill": "#60b0ff",
+      "fill": "#54a6f5",
       "thin": "#f0f0f0"
     }
   }
