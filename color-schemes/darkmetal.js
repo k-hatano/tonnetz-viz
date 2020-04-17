@@ -3,9 +3,9 @@ colorscheme.addScheme("darkmetal", {
   "background": "#000000",
   "nodes": {
     "OFF": {
-      "label": "#5e5e5e",
-      "fill": "#212121",
-      "stroke": "#424242"
+      "label": "#333333",
+      "fill": "#171717",
+      "stroke": "#282828"
     },
     "GHOST": {
       "label": "#a9a9a9",
@@ -18,21 +18,21 @@ colorscheme.addScheme("darkmetal", {
       "stroke": "#797979"
     },
     "ON": {
-      "label": "#d6d6d6",
+      "label": "#cdcdcd",
       "fill": "#424242",
-      "stroke": "#919191"
+      "stroke": "#a3a3a3"
     }
   },
   "faces": {
     "major": {
-      "label-off": "#c0c0c0",
-      "label-on": "#ffffff",
+      "label-off": "#333333",
+      "label-on": "#e1e1e1",
       "fill": "#5e5e5e",
       "thin": "#111111"
     },
     "minor": {
-      "label-off": "#c0c0c0",
-      "label-on": "#ffffff",
+      "label-off": "#323232",
+      "label-on": "#e1e1e1",
       "fill": "#4e4e4e",
       "thin": "#121212"
     }

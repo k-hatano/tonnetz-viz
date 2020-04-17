@@ -3,18 +3,18 @@ colorscheme.addScheme("carrot", {
   "background": "#00903e",
   "nodes": {
     "OFF": {
-      "label": "#007944",
-      "fill": "#78d300",
-      "stroke": "#008048"
+      "label": "#007542",
+      "fill": "#86cc0f",
+      "stroke": "#007643"
     },
     "GHOST": {
       "label": "#ffffff",
-      "fill": "#ffbd00",
+      "fill": "#ffc400",
       "stroke": "#947000"
     },
     "SUSTAIN": {
       "label": "#ffffff",
-      "fill": "#ffbf00",
+      "fill": "#ffc300",
       "stroke": "#946f00"
     },
     "ON": {
@@ -25,13 +25,13 @@ colorscheme.addScheme("carrot", {
   },
   "faces": {
     "major": {
-      "label-off": "#d4fb79",
+      "label-off": "#98bf5c",
       "label-on": "#945200",
       "fill": "#ff9300",
       "thin": "#007a45"
     },
     "minor": {
-      "label-off": "#73fa79",
+      "label-off": "#58c05d",
       "label-on": "#943f00",
       "fill": "#ff6c00",
       "thin": "#007900"

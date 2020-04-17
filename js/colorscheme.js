@@ -187,7 +187,7 @@ var colorscheme = (function() {
         ');';
 
     // Open the 'New file' page on GitHub
-    window.open('https://github.com/cifkao/tonnetz-viz/new/master/color-schemes/' +
+    window.open('https://github.com/k-hatano/tonnetz-viz/new/master/color-schemes/' +
         '?filename=color-schemes/' + name + '.js' +
         '&value=' + encodeURIComponent(contents) +
         '&message=' + encodeURIComponent(commitMessage)

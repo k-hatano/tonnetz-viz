@@ -28,13 +28,13 @@ colorscheme.addScheme("default", {
       "label-off": "#c0c0c0",
       "label-on": "#bea866",
       "fill": "#faf7db",
-      "thin": "#fffff0"
+      "thin": "#fffff2"
     },
     "minor": {
       "label-off": "#c0c0c0",
       "label-on": "#aa9b68",
       "fill": "#eeebc9",
-      "thin": "#fffff0"
+      "thin": "#fffff1"
     }
   }
 });
