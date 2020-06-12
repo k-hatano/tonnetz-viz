@@ -196,6 +196,21 @@ var tonnetz = (function() {
   module.changeScale = function(scale) {
     this.scale = parseInt($('#scale').val()); 
     this.draw();
+
+    for (var tone = 0; tone < 12; tone++) {
+
+      var $labels = $(toneGrid[tone]);
+      if (module.scale >= 0 && isDiatonicNote([tone], module.scale)) {
+        for (var i = 0; i < $labels.length; i++) {
+          $($labels[i].label).children().addClass('diatonic-node');
+        }
+      } else {
+        for (var i = 0; i < $labels.length; i++) {
+          $($labels[i].label).children().removeClass('diatonic-node');
+        }
+      }
+      console.dir($labels);
+    }
   };
 
 
@@ -463,6 +478,11 @@ var tonnetz = (function() {
 
     // Create the note label.
     node.label = createLabel(name, x, y);
+    if (module.scale >= 0 && isDiatonicNote([tone], module.scale)) {
+      $(node.label).children().addClass('diatonic-node');
+    } else {
+      $(node.label).children().removeClass('diatonic-node');
+    }
     noteLabels.appendChild(node.label);
 
     // Create labels for the two triads above this node.
