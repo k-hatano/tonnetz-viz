@@ -417,6 +417,11 @@ var tonnetz = (function() {
           ctx.lineWidth = 2;
         }
 
+        
+        if (module.scale >= 0 && isDiatonicNote([tone], module.scale)) {
+          ctx.lineWidth = 2;
+        }
+
         ctx.fill();
         ctx.stroke();
       }
