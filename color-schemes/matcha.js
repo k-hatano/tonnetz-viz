@@ -27,13 +27,13 @@ colorscheme.addScheme("matcha", {
     "major": {
       "label-off": "#c0c0c0",
       "label-on": "#ffffff",
-      "fill": "#90ef60",
-      "thin": "#e7f0e3"
+      "fill": "#80df50",
+      "thin": "#eff3ef"
     },
     "minor": {
       "label-off": "#c0c0c0",
       "label-on": "#ffffff",
-      "fill": "#96e544",
+      "fill": "#86d534",
       "thin": "#f0f0f0"
     }
   }
