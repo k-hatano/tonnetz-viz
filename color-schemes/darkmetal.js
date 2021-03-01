@@ -18,23 +18,23 @@ colorscheme.addScheme("darkmetal", {
       "stroke": "#797979"
     },
     "ON": {
-      "label": "#cdcdcd",
+      "label": "#dddddd",
       "fill": "#424242",
-      "stroke": "#a3a3a3"
+      "stroke": "#c3c3c3"
     }
   },
   "faces": {
     "major": {
       "label-off": "#333333",
       "label-on": "#e1e1e1",
-      "fill": "#5e5e5e",
-      "thin": "#111111"
+      "fill": "#4e4e4e",
+      "thin": "#222222"
     },
     "minor": {
       "label-off": "#323232",
       "label-on": "#e1e1e1",
-      "fill": "#4e4e4e",
-      "thin": "#121212"
+      "fill": "#3e3e3e",
+      "thin": "#2a2a2a"
     }
   }
 });
