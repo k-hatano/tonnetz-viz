@@ -28,13 +28,13 @@ colorscheme.addScheme("darkmetal", {
       "label-off": "#333333",
       "label-on": "#e1e1e1",
       "fill": "#4e4e4e",
-      "thin": "#222222"
+      "thin": "#0a0a0a"
     },
     "minor": {
       "label-off": "#323232",
       "label-on": "#e1e1e1",
       "fill": "#3e3e3e",
-      "thin": "#2a2a2a"
+      "thin": "#080808"
     }
   }
 });
