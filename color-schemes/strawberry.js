@@ -1,5 +1,5 @@
-colorscheme.addScheme("rose", {
-  "name": "Rose",
+colorscheme.addScheme("strawberry", {
+  "name": "Strawberry",
   "background": "#ffffff",
   "nodes": {
     "OFF": {
