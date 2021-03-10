@@ -4,7 +4,7 @@ colorscheme.addScheme("carrot", {
   "nodes": {
     "OFF": {
       "label": "#007542",
-      "fill": "#86cc0f",
+      "fill": "#56ac00",
       "stroke": "#007643"
     },
     "GHOST": {

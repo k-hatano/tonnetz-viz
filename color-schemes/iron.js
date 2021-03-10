@@ -1,9 +1,9 @@
-colorscheme.addScheme("darkmetal", {
-  "name": "Dark Metal",
+colorscheme.addScheme("iron", {
+  "name": "Iron",
   "background": "#000000",
   "nodes": {
     "OFF": {
-      "label": "#333333",
+      "label": "#3b3b3b",
       "fill": "#171717",
       "stroke": "#282828"
     },
@@ -28,13 +28,13 @@ colorscheme.addScheme("darkmetal", {
       "label-off": "#333333",
       "label-on": "#e1e1e1",
       "fill": "#4e4e4e",
-      "thin": "#0a0a0a"
+      "thin": "#191919"
     },
     "minor": {
       "label-off": "#323232",
       "label-on": "#e1e1e1",
       "fill": "#3e3e3e",
-      "thin": "#080808"
+      "thin": "#191919"
     }
   }
 });

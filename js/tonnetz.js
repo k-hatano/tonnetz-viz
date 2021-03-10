@@ -4,6 +4,7 @@ var tonnetz = (function() {
   var module = {};
 
   var TONE_NAMES = ['C', 'C♯', 'D', 'D♯', 'E', 'F', 'F♯', 'G', 'G♯', 'A', 'A♯', 'B'];
+  var TONE_NAMES_FLATTED = ['C', 'D♭', 'D', 'E♭', 'E', 'F', 'G♭', 'G', 'A♭', 'A', 'B♭', 'B'];
   var STATE_OFF = 0,
       STATE_GHOST = 1,
       STATE_SUST = 2,
@@ -21,6 +22,7 @@ var tonnetz = (function() {
   module.layout = LAYOUT_RIEMANN;
   module.unitCellVisible = false;
   module.scale = 0;
+  module.accidental = 0;
 
   var toneGrid = [];
   var tones;
@@ -37,7 +39,7 @@ var tonnetz = (function() {
     tones = $.map(Array(12), function(_, i) {
       return {
         'pitch': i,
-        'name': TONE_NAMES[i],
+        'name': module.accidental > 0 ? TONE_NAMES_FLATTED[i] : TONE_NAMES[i],
         'state': STATE_OFF,
         'byChannel': {},     // counts of this tone in each channel
         'channelsSust': {},  // channels where the tone is sustained
@@ -209,8 +211,13 @@ var tonnetz = (function() {
           $($labels[i].label).children().removeClass('diatonic-node');
         }
       }
-      console.dir($labels);
     }
+  };
+
+  module.changeAccidental = function(accidental) {
+    this.accidental = parseInt($('#accidental').val());
+    this.init();
+    this.draw();
   };
 
 
@@ -424,6 +431,7 @@ var tonnetz = (function() {
 
         ctx.fill();
         ctx.stroke();
+
       }
     }
   };
